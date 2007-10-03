@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>bleriot-XI.ac</path>
+ <offsets>
+   <x-m> 0.000 </x-m>
+   <y-m> 0.000 </y-m>
+   <z-m> 0.000 </z-m>
+   <pitch-deg>0</pitch-deg>
+ </offsets>
+
+<!-- L'hélice --> 
+<!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>600.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>helice</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+	<value>1500</value>
+      </less-than>
+    </condition>
+  </animation>
+
+<!-- Rotation de l'hélice/disque -->
+ <animation>
+   <type>spin</type>
+    <object-name>helice</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <property>/engines/engine[0]/rpm</property>
+   <factor> 1 </factor>
+   <center>
+     <x-m> -2.063 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m>  0.004 </z-m>
+   </center>
+   <axis>
+    <x> 1.000 </x>
+    <y> 0.000 </y>
+    <z> 0.000 </z>
+   </axis>
+ </animation>
+
+  <!-- Animation du manche -->
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>/controls/flight/elevator</property>
+    <factor>10</factor>
+    <center>
+      <x-m> -0.319 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.119 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>/controls/flight/aileron</property>
+    <factor>10</factor>
+    <center>
+      <x-m> -0.319 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.119 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+<!-- Gouverne de profondeur -->
+ <animation>
+  <type>rotate</type>
+  <object-name>profondeur</object-name>
+  <object-name>profondeur2</object-name>
+  <property>/controls/flight/elevator</property>
+  <factor>11</factor>
+  <center>
+   <x-m>  4.523 </x-m>
+   <y-m>  0.000 </y-m>
+   <z-m> -0.203 </z-m>
+  </center>
+  <axis>
+   <x> 0.000 </x>
+   <y> 1.000 </y>
+   <z> 0.000 </z>
+  </axis>
+ </animation>
+
+<!-- Gouverne de direction -->
+ <animation>
+  <type>rotate</type>
+  <object-name>gouverne</object-name>
+  <object-name>gouverne2</object-name>
+  <property>/controls/flight/rudder</property>
+  <factor>20</factor>
+  <center>
+   <x-m> 5.123 </x-m>
+   <y-m> 0.000 </y-m>
+   <z-m> 0.025 </z-m>
+  </center>
+  <axis>
+   <x>  0.000 </x>
+   <y>  0.000 </y>
+   <z>  1.000 </z>
+  </axis>
+ </animation>
+
+<!-- Compression -->
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionAG</object-name>
+   <object-name>roueG</object-name>
+   <property>/gear/gear[0]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>   1.0 </ind>
+       <dep> -20.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.872 </x-m>
+     <y-m> -0.728 </y-m>
+     <z-m> -0.800 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionbarre</object-name>
+   <property>/gear/gear[0]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>   1.0 </ind>
+       <dep> -10.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.377 </x-m>
+     <y-m>  0.641 </y-m>
+     <z-m> -1.106 </z-m>
+   </center>
+   <axis>
+     <x> 1.000 </x>
+     <y> 0.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>suspensionCG</object-name>
+   <object-name>suspensionBG</object-name>
+   <object-name>ressortG1</object-name>
+   <object-name>ressortG2</object-name>
+   <property>/gear/gear[0]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind> 1.000 </ind>
+       <dep> 0.143 </dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x> 0.000 </x>
+     <y> 0.000 </y>
+     <z> 1.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionBG</object-name>
+   <property>/gear/gear[0]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>  1.0 </ind>
+       <dep> -2.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.858 </x-m>
+     <y-m> -0.728 </y-m>
+     <z-m>  0.116 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionAD</object-name>
+   <object-name>roueD</object-name>
+   <property>/gear/gear[1]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>   1.0 </ind>
+       <dep> -20.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.872 </x-m>
+     <y-m>  0.728 </y-m>
+     <z-m> -0.800 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionbarre</object-name>
+   <property>/gear/gear[1]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>   1.0 </ind>
+       <dep> -10.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.377 </x-m>
+     <y-m> -0.641 </y-m>
+     <z-m> -1.106 </z-m>
+   </center>
+   <axis>
+     <x> -1.000 </x>
+     <y>  0.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>suspensionCD</object-name>
+   <object-name>suspensionBD</object-name>
+   <object-name>ressortD1</object-name>
+   <object-name>ressortD2</object-name>
+   <property>/gear/gear[1]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind> 1.000 </ind>
+       <dep> 0.143 </dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x> 0.000 </x>
+     <y> 0.000 </y>
+     <z> 1.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionBD</object-name>
+   <property>/gear/gear[1]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>  1.0 </ind>
+       <dep> -2.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m> -1.858 </x-m>
+     <y-m>  0.728 </y-m>
+     <z-m>  0.116 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionQA</object-name>
+   <object-name>roueA</object-name>
+   <property>/gear/gear[2]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>   1.0 </ind>
+       <dep> -20.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m>  2.965 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.569 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>suspensionQB</object-name>
+   <property>/gear/gear[2]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind> 1.000 </ind>
+       <dep> 0.143 </dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x> 0.000 </x>
+     <y> 0.000 </y>
+     <z> 1.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>suspensionQB</object-name>
+   <property>/gear/gear[2]/compression-norm</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0 </ind>
+       <dep> 0.0 </dep>
+     </entry>
+     <entry>
+       <ind>  1.0 </ind>
+       <dep> -2.0 </dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m>  2.966 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.050 </z-m>
+   </center>
+   <axis>
+     <x> 0.000 </x>
+     <y> 1.000 </y>
+     <z> 0.000 </z>
+   </axis>
+ </animation>
+
+<!-- Rotation des roues lors du roulage -->
+ <animation>
+   <type>spin</type>
+   <object-name>roueG</object-name>
+   <property>gear/gear[0]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+     <x-m> -1.489 </x-m>
+     <y-m> -0.729 </y-m>
+     <z-m> -1.042 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>spin</type>
+   <object-name>roueD</object-name>
+   <property>gear/gear[1]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+     <x-m> -1.489 </x-m>
+     <y-m>  0.729 </y-m>
+     <z-m> -1.042 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>spin</type>
+   <object-name>roueA</object-name>
+   <property>gear/gear[2]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+     <x-m>  3.223 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m> -0.729 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+</PropertyList>
+
