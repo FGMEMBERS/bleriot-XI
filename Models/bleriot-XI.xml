@@ -57,7 +57,7 @@
     <object-name>helice</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
    <factor> 1 </factor>
    <center>
      <x-m> -2.063 </x-m>
@@ -75,7 +75,7 @@
   <animation>
     <type>rotate</type>
     <object-name>volant</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <factor>10</factor>
     <center>
       <x-m> -0.319 </x-m>
@@ -92,7 +92,7 @@
   <animation>
     <type>rotate</type>
     <object-name>volant</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <factor>10</factor>
     <center>
       <x-m> -0.319 </x-m>
@@ -111,7 +111,7 @@
   <type>rotate</type>
   <object-name>profondeur</object-name>
   <object-name>profondeur2</object-name>
-  <property>/controls/flight/elevator</property>
+  <property>controls/flight/elevator</property>
   <factor>11</factor>
   <center>
    <x-m>  4.523 </x-m>
@@ -130,7 +130,7 @@
   <type>rotate</type>
   <object-name>gouverne</object-name>
   <object-name>gouverne2</object-name>
-  <property>/controls/flight/rudder</property>
+  <property>controls/flight/rudder</property>
   <factor>20</factor>
   <center>
    <x-m> 5.123 </x-m>
@@ -149,7 +149,7 @@
    <type>rotate</type>
    <object-name>suspensionAG</object-name>
    <object-name>roueG</object-name>
-   <property>/gear/gear[0]/compression-norm</property>
+   <property>gear/gear[0]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -175,7 +175,7 @@
  <animation>
    <type>rotate</type>
    <object-name>suspensionbarre</object-name>
-   <property>/gear/gear[0]/compression-norm</property>
+   <property>gear/gear[0]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -204,7 +204,7 @@
    <object-name>suspensionBG</object-name>
    <object-name>ressortG1</object-name>
    <object-name>ressortG2</object-name>
-   <property>/gear/gear[0]/compression-norm</property>
+   <property>gear/gear[0]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -225,7 +225,7 @@
  <animation>
    <type>rotate</type>
    <object-name>suspensionBG</object-name>
-   <property>/gear/gear[0]/compression-norm</property>
+   <property>gear/gear[0]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -252,7 +252,7 @@
    <type>rotate</type>
    <object-name>suspensionAD</object-name>
    <object-name>roueD</object-name>
-   <property>/gear/gear[1]/compression-norm</property>
+   <property>gear/gear[1]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -278,7 +278,7 @@
  <animation>
    <type>rotate</type>
    <object-name>suspensionbarre</object-name>
-   <property>/gear/gear[1]/compression-norm</property>
+   <property>gear/gear[1]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -307,7 +307,7 @@
    <object-name>suspensionBD</object-name>
    <object-name>ressortD1</object-name>
    <object-name>ressortD2</object-name>
-   <property>/gear/gear[1]/compression-norm</property>
+   <property>gear/gear[1]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -328,7 +328,7 @@
  <animation>
    <type>rotate</type>
    <object-name>suspensionBD</object-name>
-   <property>/gear/gear[1]/compression-norm</property>
+   <property>gear/gear[1]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -355,7 +355,7 @@
    <type>rotate</type>
    <object-name>suspensionQA</object-name>
    <object-name>roueA</object-name>
-   <property>/gear/gear[2]/compression-norm</property>
+   <property>gear/gear[2]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -381,7 +381,7 @@
  <animation>
    <type>translate</type>
    <object-name>suspensionQB</object-name>
-   <property>/gear/gear[2]/compression-norm</property>
+   <property>gear/gear[2]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
@@ -402,7 +402,7 @@
  <animation>
    <type>rotate</type>
    <object-name>suspensionQB</object-name>
-   <property>/gear/gear[2]/compression-norm</property>
+   <property>gear/gear[2]/compression-norm</property>
    <interpolation>
      <entry>
        <ind> 0.0 </ind>
