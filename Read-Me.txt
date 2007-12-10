@@ -27,6 +27,8 @@ Some useful keys:
 Thanks
 ======
 
+Detlef FABER for FDM Update
+
 ===============
 BARANGER Emmanuel
 May, 25, 2007. 
@@ -62,6 +64,8 @@ Quelques touches utiles :
 
 Remerciements
 =============
+
+Detlef FABER pour les améliorations du FDM
 
 ===============
 BARANGER Emmanuel

@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 
-<airplane mass="680">
+<airplane mass="530">
 
 <!-- Configuration d'approche -->
-<approach speed="20" aoa="15">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+<approach speed="31" aoa="15">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
 </approach>
 
 <!-- Configuration de croisière -->
-<cruise speed="64" alt="0">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
+<cruise speed="40" alt="0">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="0.75"/>
   <control-setting axis="/controls/flight/elevator-trim" value="0.1"/>
 </cruise>
@@ -24,15 +24,16 @@
       y="0.42" 
       z="0.0" 
       taper="1.0" 
-      incidence="2" 
-      twist="-3"
+      incidence="-3" 
+      twist="0"
       length="4.87" 
       chord="1.60" 
       sweep="0" 
       dihedral="5" 
-      camber="0.1">
-      <stall aoa="18" width="4" peak="1.5"/>
-      <flap0 start=".31" end="0.85" lift="1.5" drag="1.4"/>
+			idrag="1.6"
+      camber="0.11">
+      <stall aoa="8" width="4" peak="1.5"/>
+      <flap0 start=".31" end="0.85" lift="1.4" drag="1.4"/>
       <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
       <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
       <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
@@ -42,13 +43,13 @@
 <hstab x="-4.87" 
        y="0.05" 
        z="-0.42" 
-       taper="0.8" 
-       effectiveness="1.24"
+       taper="1.0" 
+
        length="1.49" 
        chord="1.13" 
        sweep="0">
-       <stall aoa="16" width="4" peak="1.5"/>
-       <flap0 start="0" end="1" lift="1.4" drag="1.2"/> 
+       <stall aoa="14" width="4" peak="1.5"/>
+       <flap0 start="0" end="1" lift="1.7" drag="1.2"/> 
        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
        <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
        <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
@@ -58,7 +59,6 @@
        y="0" 
        z="-0.65" 
        taper="0.38" 
-       effectiveness="2.0"
        length="1.31" 
        chord="1.37" 
        sweep="0" 
@@ -70,38 +70,43 @@
        <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
 </vstab>
 
-<propeller radius="1.00"
-           x="0.71" 
-	   y="0" 
-	   z="-0.65"
-	   cruise-speed="60"
-	   cruise-rpm="2150"
-           cruise-alt="8000" 
-	   cruise-power="28"
-           takeoff-power="55" 
-	   takeoff-rpm="2300"
-           eng-power="30" 
-	   eng-rpm="2500"
-	   mass="150" 
-	   moment="4">
-           <!-- <actionpt x="1.31" y="0" z="-0.65"/> -->
-           <actionpt x="2.063" y="0" z="0.004"/>
-           <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-           <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-           <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-           <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-</propeller>
+ <propeller radius="1.0" x="2.4" y="0" z="0.2" mass="125" moment="4"
+             cruise-alt="3000" cruise-speed="25"
+             cruise-rpm="1200" cruise-power="20"
+             takeoff-rpm="1300" takeoff-power="24"
+            >
+		<actionpt x="2.063" y="0" z="0.004"/>
+
+    <piston-engine eng-power="28" eng-rpm="1450"
+                   displacement="28.193" compression="12.7"
+                   turbo-mul="1" >
+
+      <control-input axis="/controls/engines/engine[0]/throttle"
+                     control="THROTTLE"/>
+      <control-input axis="/controls/engines/engine[0]/starter"
+                     control="STARTER"/>
+      <control-input axis="/controls/engines/engine[0]/magnetos"
+                     control="MAGNETOS"/>
+      <control-input axis="/controls/engines/engine[0]/mixture"
+                     control="MIXTURE"/>
+    </piston-engine>
+  </propeller>
 
 <gear x="1.489" 
       y="0.729" 
       z="-1.4" 
-      compression="0.01"> <!-- gauche -->
+			sfric="1.1"
+			dfric="0.6"
+      compression="0.02"> <!-- gauche -->
+
 </gear>
 
 <gear x="1.489" 
       y="-0.729" 
       z="-1.4" 
-      compression="0.01"> <!-- droite -->
+			sfric="1.1"
+			dfric="0.6"
+      compression="0.02"> <!-- droite -->
 </gear>
 
 <gear x="-3.223" 
