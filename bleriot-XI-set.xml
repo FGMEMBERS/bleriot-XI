@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <PropertyList include="bleriot-XI-jsbsim-set.xml"> -->
-<PropertyList include="bleriot-XI-yasim-set.xml">
+<!-- <PropertyList include="bleriot-XI-jsbsim-cnf.xml"> -->
+<PropertyList include="bleriot-XI-yasim-cnf.xml">
 
   <sim>
-    <description>Bleriot XI</description>
-    <author>BARANGER Emmanuel</author>
+    <description>Bleriot XI (YASim)</description>
+    <author>BARANGER Emmanuel (3F/FDM)</author>
   </sim>
 
 </PropertyList>

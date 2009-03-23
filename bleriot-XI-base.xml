@@ -1,30 +1,101 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <sim include="Nasal/views.xml">
- 
+
     <author type="string">BARANGER Emmanuel</author>
     <status type="string">0.1 Alpha</status>
     <aircraft-version>0.2</aircraft-version>
-   
+
     <fuel-fraction>1.0</fuel-fraction>
-  
+
     <sound>
       <path>Aircraft/bleriot-XI/Sounds/bleriot-XI-sound.xml</path>
     </sound>
-    
+
     <startup>
-      <splash-texture>Aircraft/bleriot-XI/bleriot-XI-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/bleriot-XI/bleriot-XI-splash.png</splash-texture>
     </startup>
 
     <virtual-cockpit archive="y">true</virtual-cockpit>
     <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
-    
+
     <model>
       <path>Aircraft/bleriot-XI/Models/bleriot-XI.xml</path>
     </model>
-    
+
+    <!-- Essais de caméra multiple
+    <rendering>
+      <camera-group>
+        <window>
+          <name>wide</name>
+          <host-name type="string"></host-name>
+          <display>0</display>
+          <screen>0</screen>
+          <width>1024</width>
+          <height>768</height>
+          <decoration type = "bool">true</decoration>
+        </window>
+        <camera>
+          <window>
+            <name>wide</name>
+          </window>
+          <viewport>
+            <x>0</x>
+            <y>0</y>
+            <width>1024</width>
+            <height>768</height>
+          </viewport>
+          <view>
+            <heading-deg type = "double">0</heading-deg>
+          </view>
+          <frustum>
+            <top>0.133</top>
+            <bottom>-0.133</bottom>
+            <left>-.5004</left>
+            <right>-.1668</right>
+            <near>0.4</near>
+            <far>120000.0</far>
+          </frustum>
+        </camera>
+        <camera>
+          <window>
+            <name type="string">wide</name>
+          </window>
+          <viewport>
+            <x>0</x>
+            <y>0</y>
+            <width>160</width>
+            <height>120</height>
+          </viewport>
+          <view>
+            <heading-deg type = "double">0</heading-deg>
+          </view>
+          <frustum>
+            <top>0.133</top>
+            <bottom>-0.133</bottom>
+            <left>-.1668</left>
+            <right>.1668</right>
+            <near>0.4</near>
+            <far>120000.0</far>
+          </frustum>
+        </camera>
+        <gui>
+          <window>
+            <name type="string">wide</name>
+          </window>
+        </gui>
+      </camera-group>
+    </rendering>
+    -->
   </sim>
 
+  <instrumentation>
+    <marker-beacon>
+      <serviceable type="bool">false</serviceable>
+    </marker-beacon>
+  </instrumentation>
+
 </PropertyList>
+
