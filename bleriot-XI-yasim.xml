@@ -34,6 +34,7 @@
 
         <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
   </wing>
 
   <hstab x="-4.87" y="0.05" z="-0.42" 
