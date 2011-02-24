@@ -18,9 +18,6 @@
       <splash-texture>Aircraft/bleriot-XI/bleriot-XI-splash.png</splash-texture>
     </startup>
 
-    <virtual-cockpit archive="y">true</virtual-cockpit>
-    <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
-
     <model>
       <path>Aircraft/bleriot-XI/Models/bleriot-XI.xml</path>
     </model>
