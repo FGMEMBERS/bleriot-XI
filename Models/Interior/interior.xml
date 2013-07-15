@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>siege</object-name>
+    <object-name>bidon1</object-name>
+    <object-name>bidon2</object-name>
+    <object-name>bidon3</object-name>
+    <object-name>bidon4</object-name>
+    <object-name>volant</object-name>
+
+    <!-- Objets transparents -->
+  </animation> 
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/bleriot-XI/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -0.182 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.204 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Animation du manche -->
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>10</factor>
+    <center>
+      <x-m> -0.319 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.119 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor>10</factor>
+    <center>
+      <x-m> -0.319 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.119 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

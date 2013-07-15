@@ -27,11 +27,12 @@ Some useful keys:
 Thanks
 ======
 
-Detlef FABER for FDM Update
+Wood texture by : by Orman Clark for PremiumPixels.com
 
 ===============
 BARANGER Emmanuel
-May, 25, 2007. 
+May, 25, 2007
+July, 15, 2013
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -65,11 +66,12 @@ Quelques touches utiles :
 Remerciements
 =============
 
-Detlef FABER pour les améliorations du FDM
+texture de bois : ar Orman Clark pour PremiumPixels.com
 
 ===============
 BARANGER Emmanuel
-25 Mai 2007.
+25 Mai 2007
+15 Juillet 2013
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
