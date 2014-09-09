@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Bleriot XI (YASim)</description>
+    <author>BARANGER Emmanuel (3F/FDM)</author>
+    <status>0.3 Alpha</status>
+    <aircraft-version>0.3</aircraft-version>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <sound>
+      <path>Aircraft/bleriot-XI/Sounds/bleriot-XI-sound.xml</path>
+    </sound>
+
+    <startup>
+      <splash-texture>Aircraft/bleriot-XI/bleriot-XI-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/bleriot-XI/Models/bleriot-XI.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay n="0">
+      <chat_display>1</chat_display>
+      <generic n="0"> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
+        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
+        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <!-- Essais de caméra multiple
+    <rendering>
+      <camera-group>
+        <window>
+          <name>wide</name>
+          <host-name type="string"></host-name>
+          <display>0</display>
+          <screen>0</screen>
+          <width>1024</width>
+          <height>768</height>
+          <decoration type = "bool">true</decoration>
+        </window>
+        <camera>
+          <window>
+            <name>wide</name>
+          </window>
+          <viewport>
+            <x>0</x>
+            <y>0</y>
+            <width>1024</width>
+            <height>768</height>
+          </viewport>
+          <view>
+            <heading-deg type = "double">0</heading-deg>
+          </view>
+          <frustum>
+            <top>0.133</top>
+            <bottom>-0.133</bottom>
+            <left>-.5004</left>
+            <right>-.1668</right>
+            <near>0.4</near>
+            <far>120000.0</far>
+          </frustum>
+        </camera>
+        <camera>
+          <window>
+            <name type="string">wide</name>
+          </window>
+          <viewport>
+            <x>0</x>
+            <y>0</y>
+            <width>160</width>
+            <height>120</height>
+          </viewport>
+          <view>
+            <heading-deg type = "double">0</heading-deg>
+          </view>
+          <frustum>
+            <top>0.133</top>
+            <bottom>-0.133</bottom>
+            <left>-.1668</left>
+            <right>.1668</right>
+            <near>0.4</near>
+            <far>120000.0</far>
+          </frustum>
+        </camera>
+        <gui>
+          <window>
+            <name type="string">wide</name>
+          </window>
+        </gui>
+      </camera-group>
+    </rendering>
+    -->
+    
+    <menubar include="Dialogs/bleriot-XI-menu.xml"/>
+      
+  </sim>
+
+  <instrumentation>
+    <marker-beacon>
+      <serviceable type="bool">false</serviceable>
+    </marker-beacon>
+  </instrumentation>
+
+  <nasal>
+    <bleriotXI>
+      <file>Aircraft/bleriot-XI/Nasal/liveries.nas</file>
+    </bleriotXI>
+  </nasal>
+
+</PropertyList>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Bleriot XI   : 2007 Emmanuel BARANGER
+                    2011 Updated with Melchior's script
+
+     Source       : http://en.wikipedia.org/wiki/Bl%C3%A9riot_XI
+                 
+     Wingspan     :  7.79 m    (  25 ft  7 in )
+     Length       :  7.62 m    (  25 ft  0 in )
+     Height       :  2.69 m    (   8 ft 10 in )
+     Empty weight :  230 kg    ( 507 lb       )
+     Engine       : Anzani 3-cylinder fan-type, or 120 deg cylinder angle "true radial".( 35 hp)
+     Max speed    :  75.6 km/h (  41 kts      )
+-->
+
+<airplane mass="507">
+
+  <approach speed="20" aoa="4">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+  </approach>
+
+  <cruise speed="38" alt="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.75"/>
+  </cruise>
+
+  <cockpit x="-0.075" y="0" z="1.125"/>
+
+  <fuselage ax="1.933" ay="0" az="0.156" bx="-5.109" by="0" bz="0.010" width="0.740" taper="0.16" midpoint="0.02"/>
+
+  <!--
+   incidence="10"
+  -->
+  <wing x="0.584" y="0.351" z="0.379"  
+        chord="2.190" 
+        length="3.880"  
+        taper="1"  
+        dihedral="5" 
+        camber="0.02">
+        <stall aoa="20" width="1" peak="1.6"/>
+        <flap0 start="0.31" end="0.85" lift="1.4" drag="1.2"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
+  </wing>
+
+  <!--
+   incidence="5"
+  -->
+  <hstab x="-4.522" y="0.05" z="-0.217" 
+         chord="0.862"
+         length="1.755"
+         taper="1">
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="0.6" lift="1.7" drag="1.2"/> 
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-5.280" y="0" z="-0.135" 
+         chord="0.580" 
+         length="0.810" 
+         taper="1">
+         <stall aoa="16" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.7" drag="1.2"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines      : Anzani 3-cylinder
+
+       Informations : http://en.wikipedia.org/wiki/Anzani_3-cylinder
+
+       Type         : 3-cylinder air-cooled fan
+       Power        :   22 - 25 hp
+       Displacement : 3.53 litres (216 cu in)
+       Masse        :   65 kg (143 lb)
+  -->
+  <propeller x="1.808" y="0" z="0.0"
+             radius="1.045"
+             mass="143"
+             moment="4"
+             cruise-alt="3000"
+             cruise-speed="35"
+             cruise-rpm="1200"
+             cruise-power="20"
+             takeoff-rpm="1300"
+             takeoff-power="25">
+             <actionpt x="2.063" y="0" z="0.004"/>
+             <piston-engine eng-power="25" 
+                            eng-rpm="1450"
+                            displacement="216">
+                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+            </piston-engine>
+  </propeller>
+
+  <!-- gauche -->  
+  <gear x="1.489" y="0.729" z="-1.4" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+  <!-- droite -->
+  <gear x="1.489" y="-0.729" z="-1.4" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+  <!-- Arriere -->  
+  <gear x="-3.223" y="0" z="-1.0" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+  <!-- Reservoir -->
+  <tank x="-0.45" y="0" z="-0.89" capacity="72"/> 
+<!--
+  <ballast x="-4.0" y="0" z="-0.70" mass="-75"/>
+-->
+</airplane>
+
