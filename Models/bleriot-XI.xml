@@ -4,6 +4,11 @@
 
   <path>bleriot-XI.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/bleriot-XI/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/bleriot-XI/Models/Liveries", 10);
@@ -78,7 +83,7 @@
     <object-name>moteur</object-name>
     <object-name>cables</object-name>
     
-    <!-- Objets transparents -->
+    <!-- Objets semi transparents -->
     <object-name>fuselage</object-name>
     <object-name>ailestrans</object-name>
     <object-name>ailestransG1</object-name>
@@ -92,6 +97,8 @@
     <object-name>derive</object-name>
     <object-name>profondeur2</object-name>
     <object-name>gouverne2</object-name>
+    
+    <!-- Objets transparents -->
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </animation> 
@@ -147,23 +154,6 @@
     <object-name>moteur</object-name>
     <object-name>cables</object-name>
     
-    <property-base>sim/model/livery</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailestrans</object-name>
     <object-name>ailestransG1</object-name>
@@ -177,22 +167,23 @@
     <object-name>derive</object-name>
     <object-name>profondeur2</object-name>
     <object-name>gouverne2</object-name>
-    
-    <property-base>sim/model/livery-alpha</property-base>
+        
+    <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture-alpha.png</texture>
+    <texture>texture.png</texture>
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/bleriot-XI/Models/shadow.xml</path>
@@ -205,15 +196,8 @@
 
   <!-- Interior -->
   <model>
-    <name>Interieur</name>
     <path>Aircraft/bleriot-XI/Models/Interior/interior.xml</path>
   </model>
-
-  <!-- For Rembrandt-->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
 
   <!-- Cranking effects -->
   <!-- Left -->

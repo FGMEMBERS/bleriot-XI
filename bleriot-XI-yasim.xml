@@ -2,6 +2,7 @@
 
 <!-- Bleriot XI   : 2007 Emmanuel BARANGER
                     2011 Updated with Melchior's script
+                    2015 Updated Emmanuek BARANGER
 
      Source       : http://en.wikipedia.org/wiki/Bl%C3%A9riot_XI
                  
@@ -12,8 +13,7 @@
      Engine       : Anzani 3-cylinder fan-type, or 120 deg cylinder angle "true radial".( 35 hp)
      Max speed    :  75.6 km/h (  41 kts      )
 -->
-
-<airplane mass="507">
+<airplane mass="507" version="YASIM_VERSION_CURRENT">
 
   <approach speed="20" aoa="4">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
@@ -29,9 +29,6 @@
 
   <fuselage ax="1.933" ay="0" az="0.156" bx="-5.109" by="0" bz="0.010" width="0.740" taper="0.16" midpoint="0.02"/>
 
-  <!--
-   incidence="10"
-  -->
   <wing x="0.584" y="0.351" z="0.379"  
         chord="2.190" 
         length="3.880"  
@@ -49,9 +46,6 @@
         <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
   </wing>
 
-  <!--
-   incidence="5"
-  -->
   <hstab x="-4.522" y="0.05" z="-0.217" 
          chord="0.862"
          length="1.755"
@@ -131,8 +125,5 @@
 
   <!-- Reservoir -->
   <tank x="-0.45" y="0" z="-0.89" capacity="72"/> 
-<!--
-  <ballast x="-4.0" y="0" z="-0.70" mass="-75"/>
--->
+  
 </airplane>
-

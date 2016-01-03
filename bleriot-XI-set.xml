@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="bleriot-XI-jsbsim-cnf.xml"> -->
-<PropertyList include="bleriot-XI-yasim-cnf.xml">
+<PropertyList include="bleriot-XI-base.xml">
 
   <sim>
     
     <description>Bleriot XI (YASim)</description>
     <author>BARANGER Emmanuel (3F/FDM)</author>
+    
+    <flight-model>yasim</flight-model>
+    <aero>bleriot-XI-yasim</aero>
     
     <rating>
       <FDM type="int">     2 </FDM>
@@ -18,4 +20,3 @@
   </sim>
 
 </PropertyList>
-
