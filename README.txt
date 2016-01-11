@@ -35,6 +35,7 @@ May, 25, 2007
 July, 15, 2013
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
 
 
@@ -66,7 +67,7 @@ Quelques touches utiles :
 Remerciements
 =============
 
-texture de bois : ar Orman Clark pour PremiumPixels.com
+texture de bois : par Orman Clark pour PremiumPixels.com
 
 ===============
 BARANGER Emmanuel
@@ -74,4 +75,5 @@ BARANGER Emmanuel
 15 Juillet 2013
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr

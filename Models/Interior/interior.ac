@@ -9,7 +9,7 @@ data 6
 bidon1
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 965
 -0.904964 0.265493 -0.020351
 -0.902738 0.265493 -0.017639
@@ -8217,7 +8217,7 @@ data 6
 bidon2
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 965
 1.120462 0.192671 0.086796
 1.120462 0.17407 0.102061
@@ -16425,7 +16425,7 @@ data 6
 bidon3
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 965
 1.870723 0.201765 -0.020351
 1.872949 0.201765 -0.017639
@@ -24633,7 +24633,7 @@ data 6
 bidon4
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 965
 2.767501 0.184188 0.086796
 2.767501 0.165587 0.102061
@@ -32841,7 +32841,7 @@ data 5
 siege
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 270
 0.09758 0.178017 0.212313
 0.09758 0.070911 0.212313
@@ -34312,7 +34312,7 @@ data 6
 volant
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 945
 -0.314425 -0.119342 -0.004707
 -0.312982 -0.119342 -0.002547
